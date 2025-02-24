@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Planets</title>
+        <link rel="stylesheet" href="CSS/style.css">
+    </head>
+    <header>
+
+        <h1>Statistics and Study</h1>
+        <p>Cosmic Adventures 2025</p>
+       
+   <div class="box-container">
+     <div class="box" onclick="location.href='index.html'">
+       <h2>Home</h2>
+     </div>
+     <div class="box" onclick="location.href='page2.html'">
+       <h2>Statistics</h2>
+     </div>
+     <div class="box" onclick="location.href='page3.html'">
+       <h2>The Solar System</h2>
+     </div>
+     <div class="box" onclick="location.href='page4.html'">
+       <h2>Contact</h2>
+   </div>
+   </header>
+    <h1>Interesting facts about our solar system</h1>
+    <p>Jupiter, Saturn and Neptune has no solid surface.</p>
+    <p>It can take over 800 years to fly to Pluto.</p>
+    <p>The sun is 330,330 times larger than Eartth.</p>
+
+
+    <body>
+
+    
+        <div class="container">
+            
+            <div class="box" onclick="showPlanetInfo('mercury')">Mercury</div>
+            <div class="box" onclick="showPlanetInfo('venus')">Venus</div>
+            <div class="box" onclick="showPlanetInfo('earth')">Earth</div>
+            <div class="box" onclick="showPlanetInfo('mars')">Mars</div>
+            <div class="box" onclick="showPlanetInfo('jupiter')">Jupiter</div>
+            <div class="box" onclick="showPlanetInfo('saturn')">Saturn</div>
+            <div class="box" onclick="showPlanetInfo('uranus')">Uranus</div>
+            <div class="box" onclick="showPlanetInfo('neptune')">Neptune</div>
+        </div>
+    
+       
+        <div id="planetInfo">
+            
+            <img id="planetImage" style="width: 50%; max-width: 500px;">
+            <p id="planetDescription"></p>
+        </div>
+    
+        <script>
+            
+            function showPlanetInfo(planet) {
+                let imagePath = '';
+                let description = '';
+    
+                
+                if (planet === 'mercury') {
+                    imagePath = 'images/mercury.jpg';
+                    description = 'If you search the sky with binoculars you will be able to see Mercury right above the horizon. Mercury is the closest planet to the sun and classified as one of the hottest planets. Mercury is named after the messenger of the Roman Gods. Mercurys atmosphere is very thin and primarily made of oxygen, sodium, hydrogen, helium and potassium. The size of Mercury is only a little larger than Earths Moon.';
+                } else if (planet === 'venus') {
+                    imagePath = 'images/venus.jpg';
+                    description = 'Venus is the second planet from the sun. Venus is the hottest planet because it has an atmosphere primarily composed of carbon dioxide. Venus is known as the evening star when it is on the same side as the Earth and becomes visible just after the sun goes down. Venus is known as Earths sister planet because they are similar size and weight. Venus clouds are made from sulfur.';
+                } else if (planet === 'earth') {
+                    imagePath = 'images/earth.jpg';
+                    description = 'Earth is the third planet from the sun. Earth’s name originated to (“Die Erde”) the German word for the ground.  Earth is a water world with two-thirds of the planet covered by water.  Earth’s atmosphere is rich in nitrogen and oxygen. The tilt of the Earth is what creates the four seasons – spring, summer, autumn, winter. Earth is the only planet in the solar system to support life. Its distance from the sun means its not too hot or cold for living things to survive.';
+                } else if (planet === 'mars') {
+                    imagePath = 'images/mars.jpg';
+                    description = 'Mars is called the Red Planet due to its reddish appearance. Mars has two moons. Mars is the fourth planet from the sun. Mars is similar to earth – it is rocky, has mountains, valleys, canyons and storm systems too. Mars’ atmosphere is too thin for liquid water to exist on the surface for any length of time. Mars is named for the Roman God of war. ';
+                } else if (planet === 'jupiter') {
+                    imagePath = 'images/jupiter.jpg';
+                    description = 'Jupiter is the largest planet in the solar system. Jupiter has rings (a belt of rocks) around it. Jupiter’s ring is thin and dark so cannot be seen from Earth. Jupiter is the fifth planet from the sun. On Europa, one of Jupiter’s moons, it is possible to ice skate as the moon is covered in smooth ice. Jupiter has swirling clouds that are colourful due to different types of trace gasses including ammonia ice, ammonium hydrosulphide, crystals as well as water, ice and vapour. Jupiter is named for the ruler of the Roman Gods.  Jupiter has 95 moons, including the largest moon in the solar system.';
+                } else if (planet === 'saturn') {
+                    imagePath = 'images/saturn.jpg';
+                    description = 'Saturn has rings (a belt of rocks) around it. Saturn’s rings are bright, wide and colourful. Saturn is the sixth planet from the sun. Saturn is the second largest planet and is the least dense as it is mostly made of gas anmd liquid with a density of 0.69grams. Saturn is named for Roman God of Agriculture. The gaseous planet is mostly hydrogen and helium and has numerous moons. Saturn is dark, it is too far away from the sun that it recieves only 1% of the sunlight that Earth does.';
+                } else if (planet === 'uranus') {
+                    imagePath = 'images/uranus.jpg';
+                    description = 'Uranus has rings (a belt of rocks) around it. Uranus has 9 dark rings around it. Uranus is the seventh planet from the sun. Uranus has clouds made of hydrogen sulphide. Unlike Venus or any other planet, its equator is nearly at right angles to its orbits which means it basically orbits on its side making it unique. Uranus is named for the personification of heaven in ancient myth.';
+                } else if (planet === 'neptune') {
+                    imagePath = 'images/neptune.jpg';
+                    description = 'Neptune has rings ( a belt of rocks) around it. Neptunes rings are dark, but contain a few bright arcs. Neptune is the eighth planet from the sun which makes ut the furthest away from the sun. Neptune is named after the Roman God of Water. Neptune is approximately the same size as Uranus as it is known for its supersonic strong winds. Neptune was the first planet predicted to exist by using math, rather than being visually detected.'
+              
+                    }
+    
+                
+                document.getElementById('planetImage').src = imagePath;
+                document.getElementById('planetDescription').innerText = description;
+            }
+        </script>
+      <div class="back-button-container">
+        <a href="index.html" class="back-button">Back to Home</a>
+      </div>
+      <footer>
+        <p>&copy; 2025 Cosmic Adventures. All Rights Reserved.</p>
+    </footer>
+    </body>
+</html>
